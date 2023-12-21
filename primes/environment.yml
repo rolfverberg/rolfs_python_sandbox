@@ -1,9 +1,0 @@
-name: sandbox_prime
-channels:
-  - defaults
-dependencies:
-  - python>=3.9
-  - matplotlib==3.7.1
-  - pip
-  - pip:
-    - cython==3.0.6

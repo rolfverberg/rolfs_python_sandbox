@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python>=3.9
+  - numpy==1.26.2
 #  - astra-toolbox==2.1.0
 #  - lmfit==1.1.0
 #  - matplotlib==3.7.1

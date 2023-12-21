@@ -12,13 +12,17 @@ from get_primes import (
 
 if __name__ == '__main__':
 
-#    num_primes = 5
-#    print(f'\nThe first {num_primes} prime numbers are:\n\t'
-#          f'{get_primes(num_primes)}\n')
+    num_primes = 100
+    t0 = time()
+    primes = get_primes(num_primes)
+    t1 = time()
+    print(f'\nThe first {num_primes} prime numbers are:\n\t{primes}\n')
+    print(f'\nRunning get_primes({num_primes}) took {t1-t0:.6f} seconds\n')
     
     num = 1000000
     t0 = time()
     n, primes = get_num_primes(num)
+    t1 = time()
     print(f'\nThe number of primes in [0:{num}] is {n}')
 #    print(f'These {n} prime numbers are:\n\t{primes}')
-    print(f'\nIt took {time()-t0:.2f} seconds\n')
+    print(f'\nRunning get_num_primes({num}) took {t1-t0:.6f} seconds\n')

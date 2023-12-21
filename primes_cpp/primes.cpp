@@ -57,7 +57,7 @@ int main() {
     num_primes, run_time);
   delete[] primes;
 
-  num = 100000;
+  num = 5000000;
   primes = new int[num];
   if (!primes) fprintf(stderr, "Memory allocation failed");
   gettimeofday(&t0, NULL);
