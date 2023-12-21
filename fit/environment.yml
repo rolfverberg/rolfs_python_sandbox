@@ -1,0 +1,9 @@
+name: sandbox_fit
+channels:
+#  - astra-toolbox
+  - defaults
+dependencies:
+  - python>=3.9
+#  - astra-toolbox==2.1.0
+  - lmfit==1.1.0
+  - matplotlib==3.7.1
