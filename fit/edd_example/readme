@@ -1,0 +1,5 @@
+lmfit:
+/nfs/chess/user/rv43/miniforge3/envs/sandbox_fit/lib/python3.11/site-packages/lmfit
+
+scipy:
+/nfs/chess/user/rv43/miniforge3/envs/sandbox_fit/lib/python3.11/site-packages/scipy/optimize

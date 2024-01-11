@@ -1,0 +1,5 @@
+https://realpython.com/build-python-c-extension-module/
+
+Install:
+python3 setup.py install
+pytest -q

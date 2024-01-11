@@ -130,3 +130,6 @@ dmypy.json
 
 # text editor backups
 *~
+
+# raw data
+concurrency/data/

@@ -9,6 +9,7 @@ Created on Tu Apr 26 13:22:35 2022
 
 import numpy as np
 import random
+from time import time
 
 from fit import FitMap
 from general import quick_plot
@@ -67,8 +68,10 @@ def create_map(
 if __name__ == '__main__':
 
     # Create model
+    num_i=10
+    num_j=10
     add_exp = True
-    x, y_map, centers = create_map(add_exp=add_exp)
+    x, y_map, centers = create_map(num_i=num_i, num_j=num_j, add_exp=add_exp)
 
     # Create conventional Python model
     fit_python = FitMap(y_map, x=x)
@@ -76,7 +79,11 @@ if __name__ == '__main__':
     if add_exp:
         background.append('exponential')
     fit_python.create_multipeak_model(centers, background=background)
-    fit_python.fit(plot=True, skip_init=True, print_report=False, num_proc=1)
+    t0 = time()
+    fit_python.fit(num_proc=10)
+    t1 = time()
+    print(f'\nRunning the fit took {t1-t0:.6f} seconds\n')
+    #fit_python.fit(plot=True, skip_init=True, print_report=False, num_proc=1)
     #print(f'best_parameters: {fit_python.best_parameters()}')
     #print(f'best_values: {fit_python.best_values}')
     #print(f'redchi: {fit_python.redchi}')
